@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: '0 0 * * *'  # Every day at midnight UTC
     # To run every 5-8 min, change to: '*/5 * * * *'
+  workflow_dispatch:  # Allows manual trigger from Actions tab
 
 jobs:
   commit:
