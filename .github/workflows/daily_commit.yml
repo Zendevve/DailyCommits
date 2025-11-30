@@ -2,8 +2,9 @@ name: Daily Commit Automation
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Every day at midnight UTC
-    # To run every 5-8 min, change to: '*/5 * * * *'
+    # Runs twice daily: 9 AM and 9 PM GMT+8 (1 AM and 1 PM UTC)
+    - cron: '0 1 * * *'   # 9 AM GMT+8 (1 AM UTC)
+    - cron: '0 13 * * *'  # 9 PM GMT+8 (1 PM UTC)
   workflow_dispatch:  # Allows manual trigger from Actions tab
 
 jobs:
