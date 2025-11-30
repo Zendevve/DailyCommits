@@ -1,2 +1,2 @@
 Hello, this is an automated commit tracker
-commit number: 1
+commit number: 2
