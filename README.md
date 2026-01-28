@@ -1,19 +1,19 @@
 # DailyCommits
 
-Automated daily commit tracker using GitHub Actions 🤖
+Automated hourly commit tracker using GitHub Actions 🤖
 
 ## What This Does
 
 This repository uses GitHub Actions to automatically:
 - Create or update a `commit_number.md` file
 - Increment the commit counter
-- Push changes to the repository daily at midnight UTC
+- Push changes to the repository every hour (24 commits per day)
 
 ## How It Works
 
 The workflow runs on a schedule defined in `.github/workflows/daily_commit.yml`:
-- **Default**: Runs once per day at midnight UTC (`cron: '0 0 * * *'`)
-- **For more frequent commits**: Change the cron to `'*/5 * * * *'` for every 5 minutes
+- **Default**: Runs every hour, 24 times per day (`cron: '0 * * * *'`)
+- **For less frequent commits**: Change the cron to `'0 0 * * *'` for once per day at midnight UTC
 
 ## Setup Instructions
 
